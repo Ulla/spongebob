@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>createTextNode example</title>
+
+<script type="text/javascript">
+function addTextNote()
+
+{
+var newtext = document.createTextNode(" You've one Spongebob in your shopping cart "); 
+var para = document.getElementById("p1");
+para.appendChild(newtext);
+}
+
+</script>
+</head>
+
+<body>
+<div style="border: 1px solid silver">
+<p id="p1">What's in your shopping cart?<br /></p>
+</div><br />
+
+<button onclick="addTextNote();">BUY!</button>
+
+</body>
+</html>
