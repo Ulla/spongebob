@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>Produkt (JS)</title>
+<link href='style.css' rel='stylesheet' type='text/css'>
+
+<script>
+	function open_win()
+	{
+	window.open("detaljinfo.html", "_blank", "width=400, height=400");
+	}
+</script>
+
+
+
+</head>
+
+<body>
+
+	<br>
+	<div id="wrapper">
+		<h1>Köp spongebobs super-samlarfigur!</h1><br><br>
+	
+		<h2>"Den är toppen" -Ulla<br>
+			"Jättefin" -Bodil<br>
+			"Öh öh ööhhhh (dregel dregel)" -Kenth</h2>
+	
+	
+		<div id="imageholder">
+			<img src="spongebob.jpg"></img>
+		</div>
+	
+	<br><br>
+
+	<form>
+		<input type="button" value="Mer info" onclick="open_win()">
+	</form>
+	
+	
+	</div>
+
+
+<form>
+	<input type="text" id="prodAmount" onKeyUp="validateNumber()"/>
+</form>
+
+<script>
+
+function validateNumber() {
+	//1. Hämta inmatad karaktär
+	//2. Kolla om det är en siffra
+	//3. Returnera siffra eller null
+
+//alert('Linus');
+
+//var character = "hej";
+var character = document.getElementById("prodAmount");
+var characterValue = character.value;
+
+
+var n=characterValue.indexOf("1");
+
+alert(n);
+
+	if(n == -1 ){
+		alert("Linus");
+	}
+
+}
+
+</script>
+
+
+
+<!-- 4. Vi måste få folk att köpa fler och fler!
+Innan användarna klickar på Köp, så ska dom mata in hur många dom vill ha. Default är 1. För att hindra att användarna stoppar in rappakalja, måste du skriva ett skript som hindrar folk från att mata in något annat än siffror i inmatningsfältet.
+Detta går att göra på många olika sätt. Här är ett enkelt: Fånga KeyUp och validera att innehåll är OK. Om inte, återställ till föregående värde. <input ... onkeyup=”validateNumber(this);” > --> 
+
+
+
+
+</body>
+</html>
